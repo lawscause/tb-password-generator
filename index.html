@@ -19,8 +19,11 @@
         </div>
         <div class="pw-body">
             <div class="form-control">
-                <label for="len">Password Length</label>
-                <input id="len" value="15" type="number" min="8" max="128" />
+                <label for="slider">Password Length</label>
+                <!--<input id="len" value="15" type="number" min="8" max="128" />-->
+                <input type="range" id="slider" name="slider" min="8" max="128" value="12"
+                    onchange="updatePasswordLength(this)">
+                <div id="len">12</div>
             </div>
             <div class="form-control">
                 <label for="upper">Contain Uppercase Letters</label>
