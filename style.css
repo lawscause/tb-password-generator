@@ -19,9 +19,32 @@ body {
     background-color: rgb(46, 12, 80);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     min-width: 400px;
+    max-width: 405px;
+}
+
+.msg-container {
+    background-color: rgb(46, 12, 80);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    min-width: 400px;
 }
 
 .pw-header {
+    padding: 1rem;
+}
+
+.title-header {
+    padding: 0;
+    background-color: rgb(63, 16, 109);
+}
+
+#title {
+    color: white;
+    font-size: large;
+    text-align: center;
+    text-decoration: underline;  
+}
+
+.instruction-header {
     padding: 1rem;
 }
 
@@ -81,3 +104,10 @@ body {
     margin-top: 1rem;
     width: 100%;
 }
+
+
+#generate[disabled] {
+    color: lightgray;
+    background-color: gray;
+}
+

@@ -10,17 +10,22 @@
 </head>
 
 <body>
+
+
     <div class="pw-container">
-        <div class="pw-header">
-            <div class="pw">
-                <span id="pw">l823Zs78#Css09@</span>
-                <button id="copy">Copy</button>
-            </div>
+        <div class="instruction-header">
+            <div id="title">Password Generator</div>
+        </div>
+        <div class="instruction-header">
+            <div id="instructions">Instructions:</div>
+            <ol>
+                <li>Select the password criteria.</li>
+                <li>Click generate password.</li>
+            </ol>
         </div>
         <div class="pw-body">
             <div class="form-control">
                 <label for="slider">Password Length</label>
-                <!--<input id="len" value="15" type="number" min="8" max="128" />-->
                 <input type="range" id="slider" name="slider" min="8" max="128" value="12"
                     onchange="updatePasswordLength(this)">
                 <div id="len">12</div>
@@ -44,6 +49,12 @@
             <button class="generate" id="generate">
                 Generate Password
             </button>
+        </div>
+        <div class="pw-header">
+            <div class="pw">
+                <span id="pw"></span>
+                <button id="copy">Copy</button>
+            </div>
         </div>
     </div>
 </body>
