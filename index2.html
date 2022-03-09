@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Password Generator</title>
+</head>
+
+<body>
+    <div id="results"></div>
+</body>
+<script type="module">
+    import generatePassword from './script2.js';
+    let resultArray;
+    const passwordArray = [];
+
+    console.clear();
+    console.log("generatePassword : ", generatePassword);
+
+    const upperLettersStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowerLettersStr = "abcdefghijklmnopqrstuvwxyz";
+    const numbersStr = "0123456789";
+    const symbolsStr = "!@#$%^&*()_+=";
+
+
+    passwordArray.push(
+        generatePassword(
+            upperLettersStr,
+            lowerLettersStr,
+            numbersStr,
+            symbolsStr,
+            10,
+            true,
+            true,
+            true,
+            true
+        )
+    );
+
+    passwordArray.push(
+        generatePassword(
+            upperLettersStr,
+            lowerLettersStr,
+            numbersStr,
+            symbolsStr,
+            11,
+            true,
+            false,
+            false,
+            false
+        )
+    );
+
+    passwordArray.push(
+        generatePassword(
+            upperLettersStr,
+            lowerLettersStr,
+            numbersStr,
+            symbolsStr,
+            12,
+            false,
+            true,
+            false,
+            false
+        )
+    );
+
+    passwordArray.push(
+        generatePassword(
+            upperLettersStr,
+            lowerLettersStr,
+            numbersStr,
+            symbolsStr,
+            13,
+            false,
+            false,
+            true,
+            false
+        )
+    );
+
+    passwordArray.push(
+        generatePassword(
+            upperLettersStr,
+            lowerLettersStr,
+            numbersStr,
+            symbolsStr,
+            14,
+            false,
+            false,
+            false,
+            true
+        )
+    );
+
+    passwordArray.push(
+        generatePassword(
+            upperLettersStr,
+            lowerLettersStr,
+            numbersStr,
+            symbolsStr,
+            50,
+            false,
+            true,
+            true,
+            false
+        )
+    );
+
+
+    passwordArray.push(
+        generatePassword(
+            upperLettersStr,
+            lowerLettersStr,
+            numbersStr,
+            symbolsStr,
+            128,
+            true,
+            false,
+            false,
+            true
+        )
+    );
+
+    passwordArray.map((item) => {
+        console.log("generated password: ", item);
+        document.getElementById('results').innerHTML += `<p>${item}</p>`;
+    });
+    
+
+</script>
+
+</html>
